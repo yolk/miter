@@ -5,8 +5,8 @@
 gem 'miter'
 require 'miter'
 
-Miter::Base.auth(user, token)
+Miter::Base.auth(account, apikey)
 
-Miter::Projects.find(:all)
-Miter::Tasks.find(:first)
-Miter::Customers.find(:all, :params => { ... })
+Miter::Project.find(:all)
+Miter::Task.find(:first)
+Miter::Customer.find(:all, :params => { ... })

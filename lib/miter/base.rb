@@ -9,9 +9,9 @@ module Miter
   
   class Base < ActiveResource::Base
 
-    def self.auth(user, token)
-      user, token = CGI.escape(user), CGI.escape(token)
-      self.site =  "http://#{user}:#{token}@appmite.de/api/"
+    def self.auth(account, apikey)
+      apikey = CGI.escape(apikey)
+      self.site =  "http://#{apikey}:x@#{account}.mite.yo.lk/"
     end    
 
   end
